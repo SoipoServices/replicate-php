@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace BenBjurstrom\Replicate;
+namespace SoipoServices\Replicate;
 
 use Saloon\Http\Connector;
 

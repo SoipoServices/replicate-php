@@ -1,6 +1,6 @@
 <?php
 
-use BenBjurstrom\Replicate\Requests\PostPredictionCancel;
+use SoipoServices\Replicate\Requests\PostPredictionCancel;
 use Saloon\Http\Faking\MockClient;
 use Saloon\Http\Faking\MockResponse;
 

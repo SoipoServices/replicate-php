@@ -1,12 +1,12 @@
 <?php
 
-namespace BenBjurstrom\Replicate;
+namespace SoipoServices\Replicate;
 
-use BenBjurstrom\Replicate\Data\PredictionData;
-use BenBjurstrom\Replicate\Data\PredictionsData;
-use BenBjurstrom\Replicate\Requests\GetPrediction;
-use BenBjurstrom\Replicate\Requests\GetPredictions;
-use BenBjurstrom\Replicate\Requests\PostPrediction;
+use SoipoServices\Replicate\Data\PredictionData;
+use SoipoServices\Replicate\Data\PredictionsData;
+use SoipoServices\Replicate\Requests\GetPrediction;
+use SoipoServices\Replicate\Requests\GetPredictions;
+use SoipoServices\Replicate\Requests\PostPrediction;
 use Exception;
 
 class PredictionsResource extends Resource

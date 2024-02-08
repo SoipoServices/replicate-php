@@ -1,7 +1,7 @@
 <?php
 
-use BenBjurstrom\Replicate\Data\PredictionData;
-use BenBjurstrom\Replicate\Requests\PostPrediction;
+use SoipoServices\Replicate\Data\PredictionData;
+use SoipoServices\Replicate\Requests\PostPrediction;
 
 test('post prediction endpoint hello', function () {
     $connector = getMockConnector(

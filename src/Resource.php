@@ -1,6 +1,6 @@
 <?php
 
-namespace BenBjurstrom\Replicate;
+namespace SoipoServices\Replicate;
 
 use Saloon\Http\Connector;
 

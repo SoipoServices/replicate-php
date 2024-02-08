@@ -1,6 +1,6 @@
 <?php
 
-use BenBjurstrom\Replicate\Replicate;
+use SoipoServices\Replicate\Replicate;
 use Saloon\Exceptions\DirectoryNotFoundException;
 use Saloon\Exceptions\InvalidMockResponseCaptureMethodException;
 use Saloon\Http\Faking\MockClient;

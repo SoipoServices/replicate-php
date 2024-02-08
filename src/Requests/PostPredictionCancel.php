@@ -1,8 +1,8 @@
 <?php
 
-namespace BenBjurstrom\Replicate\Requests;
+namespace SoipoServices\Replicate\Requests;
 
-use BenBjurstrom\Replicate\Data\PredictionData;
+use SoipoServices\Replicate\Data\PredictionData;
 use Saloon\Contracts\Body\HasBody;
 use Saloon\Http\Response;
 use Saloon\Enums\Method;

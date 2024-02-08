@@ -1,8 +1,8 @@
 <?php
 
-use BenBjurstrom\Replicate\Requests\GetPrediction;
-use BenBjurstrom\Replicate\Requests\GetPredictions;
-use BenBjurstrom\Replicate\Requests\PostPrediction;
+use SoipoServices\Replicate\Requests\GetPrediction;
+use SoipoServices\Replicate\Requests\GetPredictions;
+use SoipoServices\Replicate\Requests\PostPrediction;
 use Saloon\Http\Faking\MockClient;
 use Saloon\Http\Faking\MockResponse;
 

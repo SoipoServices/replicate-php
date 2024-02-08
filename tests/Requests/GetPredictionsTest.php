@@ -1,7 +1,7 @@
 <?php
 
-use BenBjurstrom\Replicate\Data\PredictionsData;
-use BenBjurstrom\Replicate\Requests\GetPredictions;
+use SoipoServices\Replicate\Data\PredictionsData;
+use SoipoServices\Replicate\Requests\GetPredictions;
 use Saloon\Http\Faking\MockClient;
 use Saloon\Http\Faking\MockResponse;
 
