@@ -1,31 +1,31 @@
 # Replicate PHP client
-This is a framework-agnostic PHP client for [Replicate.com](https://replicate.com/) built on the amazing [Saloon v2](https://docs.saloon.dev/) 🤠 library. Use it to easily interact with machine learning models such as Stable Diffusion right from your PHP application.
+This is a framework-agnostic PHP client for [Replicate.com](https://replicate.com/) built on the amazing [Saloon v3](https://docs.saloon.dev/) 🤠 library. Use it to easily interact with machine learning models such as Stable Diffusion right from your PHP application.
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/benbjurstrom/replicate-php.svg?style=flat-square)](https://packagist.org/packages/benbjurstrom/replicate-php)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/benbjurstrom/replicate-php/tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/benbjurstrom/replicate-php/actions?query=workflow%3tests+branch%3Amain)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/soiposervices/replicate-php.svg?style=flat-square)](https://packagist.org/packages/soiposervices/replicate-php)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/SoipoServices/replicate-php/tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/soiposervices/replicate-php/actions?query=workflow%3tests+branch%3Amain)
 
 ## Table of contents
-- [Quick Start](https://github.com/benbjurstrom/replicate-php#-quick-start)
-- [Using with Laravel](https://github.com/benbjurstrom/replicate-php#using-with-laravel)
-- [Response Data](https://github.com/benbjurstrom/replicate-php#response-data)
-- [Webhooks](https://github.com/benbjurstrom/replicate-php#webhooks)
-- [Prediction Methods](https://github.com/benbjurstrom/replicate-php#available-prediction-methods)
-    - [get](https://github.com/benbjurstrom/replicate-php#get)
-    - [list](https://github.com/benbjurstrom/replicate-php#list)
-    - [create](https://github.com/benbjurstrom/replicate-php#create)
+- [Quick Start](https://github.com/soiposervices/replicate-php#-quick-start)
+- [Using with Laravel](https://github.com/soiposervices/replicate-php#using-with-laravel)
+- [Response Data](https://github.com/soiposervices/replicate-php#response-data)
+- [Webhooks](https://github.com/soiposervices/replicate-php#webhooks)
+- [Prediction Methods](https://github.com/soiposervices/replicate-php#available-prediction-methods)
+    - [get](https://github.com/soiposervices/replicate-php#get)
+    - [list](https://github.com/soiposervices/replicate-php#list)
+    - [create](https://github.com/soiposervices/replicate-php#create)
 
 ## 🚀 Quick start
 
 Install with composer.
 
 ```bash
-composer require benbjurstrom/replicate-php
+composer require soiposervices/replicate-php
 ```
 ### 
 
 Create a new api instance.
 ```php
-use BenBjurstrom\Replicate\Replicate;
+use SoipoServices\Replicate\Replicate;
 ...
 
 $api = new Replicate(
@@ -108,8 +108,8 @@ $data = app(Replicate::class)->predictions()->get($id);
 ## Response Data
 All responses are returned as data objects. Detailed information can be found by inspecting the following class properties:
 
-* [PredictionData](https://github.com/benbjurstrom/replicate-php/blob/main/src/Data/PredictionData.php)
-* [PredictionsData](https://github.com/benbjurstrom/replicate-php/blob/main/src/Data/PredictionsData.php)
+* [PredictionData](https://github.com/SoipoServices/replicate-php/blob/main/src/Data/PredictionData.php)
+* [PredictionsData](https://github.com/SoipoServices/replicate-php/blob/main/src/Data/PredictionsData.php)
 
 ## Webhooks
 Replicate allows you to configure a webhook to be called when your prediction is complete. To do so chain `withWebhook($url)` onto your api instance before calling the `create` method. For example:
@@ -123,7 +123,7 @@ $data->id; // la5xlbbrfzg57ip5jlx6obmm5y
 ### get()
 Use to get details about an existing prediction. If the prediction has completed the results will be under the output property.
 ```php
-use BenBjurstrom\Replicate\Data\PredictionData;
+use SoipoServices\Replicate\Data\PredictionData;
 ...
 $id = 'la5xlbbrfzg57ip5jlx6obmm5y'
 /* @var PredictionData $data */
@@ -134,7 +134,7 @@ $data->output[0]; // https://replicate.delivery/pbxt/6UFOVtl1xCJPAFFiTB2tfveYBNR
 ### list()
 Use to get a cursor paginated list of predictions. Returns an PredictionsData object.
 ```php
-use BenBjurstrom\Replicate\Data\PredictionsData
+use SoipoServices\Replicate\Data\PredictionsData
 ...
 
 /* @var PredictionsData $data */
@@ -148,7 +148,7 @@ $data->results[0]->id; // la5xlbbrfzg57ip5jlx6obmm5y
 ### create()
 Use to create a new prediction (invoke a model). Returns an PredictionData object.
 ```php
-use BenBjurstrom\Replicate\Data\PredictionData;
+use SoipoServices\Replicate\Data\PredictionData;
 ...
 $version = '5c7d5dc6dd8bf75c1acaa8565735e7986bc5b66206b55cca93cb72c9bf15ccaa';
 $input = [
